@@ -1,5 +1,7 @@
 import { useCallback, useState } from "react";
 import Input from "./components/Input";
+import "./App.css";
+
  
 interface Usuario {
   cep: string;
@@ -21,16 +23,47 @@ const App = () => {
 
 
   return (  
-    <div>
-      <Input name="cep" mask="cep" onChange={handleChange}/>
-      <Input name="currency" mask="currency" prefix='R$' onChange={handleChange}/>
-      <Input name="cpf" mask="cpf" onChange={handleChange}/>
-      <Input name="cnpj" mask="cnpj" onChange={handleChange}/>
-      <Input name="tel" mask="tel" onChange={handleChange}/>
+    <div className="container">
+      <span>CEP</span>
+      <Input 
+        name="cep" 
+        mask="cep" 
+        onChange={handleChange}
+      />
 
+      <span>VALOR</span>
+      <Input 
+        name="currency" 
+        mask="currency" 
+        prefix='R$' 
+        onChange={handleChange}
+      />
 
+      <span>CPF</span>
+      <Input 
+        name="cpf" 
+        mask="cpf" 
+        onChange={handleChange}
+      />
+
+      <span>CNPJ</span>
+      <Input 
+        name="cnpj" 
+        mask="cnpj" 
+        onChange={handleChange}
+      />
+
+      <span>TEL</span>
+      <Input 
+        name="tel" 
+        mask="tel" 
+        onChange={handleChange}
+      />
       
-      <button onClick={() => console.log(usuario) }>Salvar</button>
+      <button className="button" onClick={() => console.log(usuario) }>
+        Salvar
+      </button>
+
     </div>
   );
 }

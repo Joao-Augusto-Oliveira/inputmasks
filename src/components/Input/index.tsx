@@ -1,5 +1,6 @@
 import { InputHTMLAttributes, useCallback } from "react";
 import { cep, currency, cnpj, cpf, tel } from "./masks";
+import "./styles.css";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     mask: 'cep' | 'currency' | 'cnpj' | 'cpf' | 'tel';
